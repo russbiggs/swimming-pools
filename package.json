@@ -1,0 +1,17 @@
+{
+  "name": "pool-tesselate",
+  "version": "1.0.0",
+  "source": "src/index.js",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "build": "microbundle --compress -f iife",
+    "dev": "microbundle watch"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "rbush": "^3.0.1"
+  },
+  "devDependencies": {
+    "microbundle": "^0.11.0"
+  }
+}
