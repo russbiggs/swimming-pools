@@ -95,11 +95,11 @@ function draw(data, tree){
         const feature =  data.features[i]
         drawFeature(offsetX, offsetY,  feature);
         let box = {
-            featureId: feature.properties['@id'],
-            minX :offsetX,
-            minY :offsetY,
-            maxX :offsetX + 50,
-            maxY :offsetY + 50
+            featureId: `way/${feature.properties['id']}`,
+            minX: offsetX,
+            minY: offsetY,
+            maxX: offsetX + 50,
+            maxY: offsetY + 50
         }
         offsetX += 50;
         if (offsetX % canvas.width == 0) {
