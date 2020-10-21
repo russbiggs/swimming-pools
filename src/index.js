@@ -23,8 +23,8 @@ function boundingBox(feature) {
 function drawFeature(offsetX , offsetY, feature) {
     context.fillStyle = '#74d4de';
     const bounds = boundingBox(feature);
-    const xScale = 50 / Math.abs(bounds.xMax - bounds.xMin);
-    const yScale = 50 / Math.abs(bounds.yMax - bounds.yMin);
+    const xScale = 40 / Math.abs(bounds.xMax - bounds.xMin);
+    const yScale = 40 / Math.abs(bounds.yMax - bounds.yMin);
     const scale = (xScale < yScale ? xScale : yScale) - 0.1;
     const coords = feature.geometry.coordinates[0];
     for (let i = 0; i < coords.length; i++) {
@@ -84,9 +84,9 @@ function draw(data, tree){
     context.clearRect(0, 0, canvas.width, canvas.height);
     const featureLength = data.features.length;
     const width = getWidth();
-    const rowWidth = Math.floor( width / 50);
-    canvas.height = Math.ceil((((featureLength / rowWidth) * 50)- 1)/ 50) * 50;
-    canvas.width = Math.ceil((width-1)/50) * 50 - 50;
+    const rowWidth = Math.floor( width / 40);
+    canvas.height = Math.ceil((((featureLength / rowWidth) * 40)- 1)/ 40) * 40;
+    canvas.width = Math.ceil((width-1)/40) * 40 - 40;
     let offsetX = 0;
     let offsetY = 0;
     let boxArr = [];
@@ -98,13 +98,13 @@ function draw(data, tree){
             featureId: `way/${feature.properties['id']}`,
             minX: offsetX,
             minY: offsetY,
-            maxX: offsetX + 50,
-            maxY: offsetY + 50
+            maxX: offsetX + 40,
+            maxY: offsetY + 40
         }
-        offsetX += 50;
+        offsetX += 40;
         if (offsetX % canvas.width == 0) {
             offsetX = 0;
-            offsetY += 50;
+            offsetY += 40;
         }
         boxArr.push(box)
     }
