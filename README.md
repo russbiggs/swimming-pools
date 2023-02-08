@@ -14,7 +14,7 @@ requirements
 git clone https://github.com/russbiggs/swimming-pools
 ```
 
-2. Update the bounding box in ```query.txt``` to the area you wish to query. The order of coordinates follows the Overpass API specifications see [here](https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Bounding_box_clauses_.28.22bbox_query.22.2C_.22bounding_box_filter.22.29). 
+2. Update the bounding box in ```query.overpassql``` to the area you wish to query. The order of coordinates follows the Overpass API specifications see [here](https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide#Bounding_box_clauses_.28.22bbox_query.22.2C_.22bounding_box_filter.22.29). 
 
 3. install the required packages
 
@@ -22,7 +22,7 @@ git clone https://github.com/russbiggs/swimming-pools
 npm install
 ```
 
-4. Run the ```index.js``` script which will download from Overpass based on the query in ```query.txt```.
+4. Run the ```index.js``` script which will download from Overpass based on the query in ```query.overpassql```.
 
 ```sh
 node index.js
